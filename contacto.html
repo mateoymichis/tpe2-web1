@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/loguito.svg" />
+    <title>Viaj.Ar - Contacto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nabla:EDPT,EHLT@35,4&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/k2d">
+</head>
+<body>
+    <header class="cabecera" id="top">
+        <div class="abrir-menu">
+            <img src="img/list.svg" title="Mostrar menú" id="abrir-menu">
+            <img src="img/x-lg.svg" title="Ocultar menú" id="cerrar-menu" class="abrir-menu-ocultar">
+        </div>
+        <a class="link-logo" href="index.html">
+            <div class="cabecera-marca">
+                <div><img src="img/loguito.svg" alt="Logo" class="cabecera-logo"></div>
+                <h1 class="cabecera-h1">Viaj.Ar</h1>
+            </div>
+        </a>
+        <nav class="cabecera-menu abrir-menu-ocultar" id="cabecera-menu">
+            <ul class="menu-lista">
+                <li class="menu-lista-item"><a href="index.html">home</a> </li>
+                <li class="menu-lista-item"><a href="destinos.html">destinos</a> </li>
+                <li class="menu-lista-item"><a href="contacto.html">contacto</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contacto">
+        <p class="contactenos">Contactenos para obtener más información sobre nuestros destinos y ofertas. Deje su consulta y un representante le responderá a la brevedad.</p>
+        <form class="formulario" id="form" action="">
+            <div class="formulario-campo">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text" name="nombre" placeholder="Nombre" value="" required>
+            </div>
+            <div class="formulario-campo">
+                <label for="apellido">Apellido</label>
+                <input id="apellido" type="text" name="apellido" placeholder="Apellido" value="" required>
+            </div>
+            <div class="formulario-campo">
+                <label for="email">Correo electrónico</label>
+                <input id="email" type="email" name="email" placeholder="Correo electrónico" value="" required>
+            </div>
+            <div class="formulario-campo">
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" type="phone" name="telefono" value="" placeholder="Teléfono" required>
+            </div>
+            <div class="formulario-campo">
+                <label for="edad">Edad</label>
+                <input id="edad" type="number" name="edad" min="18" max="100" value="" placeholder="Edad" required>
+            </div>
+            <div class="formulario-campo"> 
+                <label for="sexo" >Sexo</label>
+                <label><input id="femenino" type="radio" value="femenino" name="sexo">Femenino</label>
+                <label><input id="masculino" type="radio" value="masculino" name="sexo">Masculino</label>
+                <label><input id="otro" type="radio" value="otro" name="sexo" required>Otro</label>
+            </div>
+            <div class="formulario-campo">
+                <p>¿Desea recibir nuestras ofertas?</p>
+                <label><input name="ofertas" value="ofertas-tel" type="checkbox" class="input-checkbox">Por WhatsApp</label>
+                <label><input name="ofertas" value="ofertas-mail" type="checkbox" class="input-checkbox">Por correo electrónico</label>
+            </div>
+            <div class="formulario-campo">
+                <p>Comentario</p>
+                <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Escriba aquí" required></textarea>
+            </div>
+            <div class="formulario-campo contenedor-captcha">
+                <div class="captcha" ><span id="captcha"></span></div>
+                <input type="text" id="captcha-input" placeholder="Escriba el captcha aquí">
+                <div class="alerts">
+                    <span class="captcha-vacio" id="captcha-vacio">Debe ingresar los caracteres del captcha.</span>
+                    <span class="captcha-incorrecto" id="captcha-incorrecto">Los caracteres ingresados no coinciden con el captcha.</span>
+                    <span class="captcha-correcto" id="captcha-correcto">Captcha ingresado correctamente.</span>
+                </div>
+                
+            </div>
+            <div class="formulario-campo">
+                <button type="submit" id="btnsubmit" class="bordes boton-form">Enviar formulario</button>
+                <span class="enviado" id="enviado">El formulario fue enviado correctamente. <a href="index.html">Volver al Home</a></span>
+            </div>            
+        </form>
+
+    </main>
+    <footer class="footer">
+        <a class="link-logo" href="#top">
+        <div class="footer-marca">
+            <div><img src="img/loguito.svg" alt="Logo" class="cabecera-logo"></div>
+            <h2 class="footer-h2">Viaj.Ar</h2>
+        </div>
+        </a>
+        <div>
+            <div class="footer-contact">
+                <img src="img/whatsapp.svg" alt="Logo" class="contact-logo">
+                <p class="margen">2262-123456</p>
+            </div>
+            <div class="footer-contact">
+                <img src="img/location.svg" alt="Logo" class="contact-logo">
+                <p class="margen">Av 59 N°3333</p>
+            </div>
+        </div>
+    </footer>
+    <script src="menu.js"></script>
+    <script src="contacto.js"></script>
+</body>
+</html>
